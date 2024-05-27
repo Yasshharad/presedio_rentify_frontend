@@ -16,7 +16,7 @@ const PropertyItem = ({ property, showButtons, onUpdateProperty, onDeletePropert
     useEffect(() => {
         const fetchSellerDetails = async () => {
             try {
-                const response = await axios.get(`http://localhost:5000/api/auth/users/${property.owner}`);
+                const response = await axios.get(`https://presedio-rentify-backend.onrender.com/api/auth/users/${property.owner}`);
                 setSellerDetails(response.data);
                 setShowSellerDetails(true);
             } catch (error) {
@@ -41,7 +41,7 @@ const PropertyItem = ({ property, showButtons, onUpdateProperty, onDeletePropert
         e.preventDefault();
         try {
             // Call the backend API to update the property
-            await axios.put(`http://localhost:5000/api/properties/${property._id}`, updatedPropertyData);
+            await axios.put(`https://presedio-rentify-backend.onrender.com/api/properties/${property._id}`, updatedPropertyData);
             // Call the onUpdateProperty function passed from the parent component
             onUpdateProperty(property._id, updatedPropertyData);
             setIsUpdateFormOpen(false);
@@ -53,7 +53,7 @@ const PropertyItem = ({ property, showButtons, onUpdateProperty, onDeletePropert
     const handleDeleteClick = async () => {
         try {
             // Call the backend API to delete the property
-            await axios.delete(`http://localhost:5000/api/properties/${property._id}`);
+            await axios.delete(`https://presedio-rentify-backend.onrender.com/api/properties/${property._id}`);
             // Call the onDeleteProperty function passed from the parent component
             onDeleteProperty(property._id);
         } catch (error) {

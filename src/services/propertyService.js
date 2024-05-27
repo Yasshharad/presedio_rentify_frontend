@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:5000/api/properties/';
+const API_URL = 'https://presedio-rentify-backend.onrender.com/api/properties/';
 
 const createProperty = async (propertyData, token) => {
     try {
