@@ -1,38 +1,545 @@
-.App {
+/* App.css */
+
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f9f9f9;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+/* Profile styles */
+.profile-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-container h1 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.profile-container p {
+  font-size: 16px;
+  color: #666;
+  margin: 10px 0;
+}
+
+.profile-container p span {
+  font-weight: bold;
+  color: #333;
+}
+
+
+/* Dashboard styles */
+.dashboard-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-container h1 {
+  font-size: 24px;
+  color: #333;
+}
+
+/* Home styles */
+.home-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.home-container h1 {
+  font-size: 24px;
+  color: #333;
+}
+
+.home-container .property-list {
+  margin-top: 20px;
+}
+
+.home-container .property-item {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.home-container .property-item h3 {
+  font-size: 18px;
+  color: #333;
+}
+
+.home-container .property-item p {
+  font-size: 16px;
+  color: #666;
+}
+
+.home-container .property-item button {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.home-container .property-item button:hover {
+  background-color: #45a049;
+}
+
+/* Profile styles */
+.profile-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-container h1 {
+  font-size: 24px;
+  color: #333;
+}
+
+.profile-container p {
+  font-size: 16px;
+  color: #666;
+  margin: 8px 0;
+}
+
+/* PropertyPage styles */
+.property-page-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.property-page-container h1 {
+  font-size: 24px;
+  color: #333;
+}
+
+.property-page-container p {
+  font-size: 16px;
+  color: #666;
+  margin: 8px 0;
+}
+
+.property-page-container button {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.property-page-container button:hover {
+  background-color: #45a049;
+}
+
+/* Form styles */
+form {
+  background: #fff;
+  padding: 20px;
+  margin: 20px auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  max-width: 600px;
+}
+
+form input,
+form select,
+form button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+form input:focus,
+form select:focus {
+  border-color: #333;
+}
+
+form button {
+  background-color: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #555;
+}
+
+/* PropertyItem styles */
+.property-item {
+  background: #fff;
+  padding: 20px;
+  margin: 20px auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  max-width: 600px;
+}
+
+.property-item h3 {
+  margin-top: 0;
+  color: #333;
+}
+
+.property-item p {
+  margin: 5px 0;
+}
+
+.property-item button {
+  margin-top: 10px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #333;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.property-item button:hover {
+  background-color: #555;
+}
+
+/* Seller details styles */
+.seller-details {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #f1f1f1;
+  border-radius: 4px;
+}
+
+/* Update form styles */
+.update-form {
+  margin-top: 10px;
+}
+
+.update-form input {
+  margin-bottom: 5px;
+}
+
+/* Filter styles */
+.filter-inputs {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px auto;
+  max-width: 600px;
+}
+
+.filter-inputs input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.filter-inputs input:focus {
+  border-color: #333;
+}
+
+/* PropertyList container */
+.property-list-container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+
+/* BuyerDashboard styles */
+.dashboard-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.dashboard-container p {
+  font-size: 18px;
+  color: #333;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* SellerDashboard styles */
+.dashboard-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.dashboard-container h2 {
+  text-align: center;
+  font-size: 24px;
+  color: #333;
+}
+
+.dashboard-container h3 {
+  font-size: 20px;
+  color: #555;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.property-form {
+  margin-bottom: 20px;
+}
+
+.property-list {
+  margin-top: 20px;
+}
+
+.property-list .property-item {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.property-list .property-item h3 {
+  font-size: 18px;
+  color: #333;
+}
+
+.property-list .property-item p {
+  font-size: 16px;
+  color: #666;
+}
+
+.property-list .property-item button {
+  margin-right: 10px;
+}
+
+.property-list .property-item .update-form {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+}
+
+/* Form styles */
+form {
+  background: #fff;
+  padding: 20px;
+  margin: 20px auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  max-width: 600px;
+}
+
+form input,
+form select,
+form button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+form input:focus,
+form select:focus {
+  border-color: #333;
+}
+
+form button {
+  background-color: #333;
   color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.App-link {
-  color: #61dafb;
+form button:hover {
+  background-color: #555;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* PropertyItem styles */
+.property-item {
+  background: #fff;
+  padding: 20px;
+  margin: 20px auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  max-width: 600px;
+}
+
+.property-item h3 {
+  margin-top: 0;
+  color: #333;
+}
+
+.property-item p {
+  margin: 5px 0;
+}
+
+.property-item button {
+  margin-top: 10px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #333;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.property-item button:hover {
+  background-color: #555;
+}
+
+/* Seller details styles */
+.seller-details {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #f1f1f1;
+  border-radius: 4px;
+}
+
+/* Update form styles */
+.update-form {
+  margin-top: 10px;
+}
+
+.update-form input {
+  margin-bottom: 5px;
+}
+
+/* Filter styles */
+.filter-inputs {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px auto;
+  max-width: 600px;
+}
+
+.filter-inputs input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.filter-inputs input:focus {
+  border-color: #333;
+}
+
+
+/* Navbar styles */
+nav {
+  background-color: #333;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #555;
+}
+
+/* Footer styles */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Basic form styles */
+form {
+  width: 300px;
+  margin: 0 auto;
+  margin-top: 50px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="text"],
+select {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box; /* Ensure padding and border included in width */
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* Error message style */
+p.error-message {
+  color: red;
+  margin-top: -10px;
+  margin-bottom: 10px;
+  font-size: 14px;
 }
